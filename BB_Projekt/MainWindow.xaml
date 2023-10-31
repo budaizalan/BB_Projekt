@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BB_Projekt"
         mc:Ignorable="d"
         WindowStyle="None" Height="600" Background="Transparent" AllowsTransparency="True"
-        Width="1300" ResizeMode="NoResize" FontSize="20">
+        Width="800" ResizeMode="NoResize" FontSize="20">
 
     <Window.Resources>
         <Style TargetType="Label">
@@ -17,7 +17,7 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
-                <ColumnDefinition Width="525"/>
+                <ColumnDefinition Width="550"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <Border Margin="10" Width="220" Height="40" Background="#4b3f72" CornerRadius="20" VerticalAlignment="Top">
@@ -28,27 +28,8 @@
                 <Button Height="40" x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)"/>
                 <Button Height="40" x:Name="keszitokBTN" Content="Készítők"/>
                 <Button Height="40" x:Name="statisztikaBTN" Content="Statisztika"/>
-                
             </StackPanel>
-            <Grid x:Name="mainGrid" Grid.Column="1">
-                <StackPanel>
-                    <Button Height="20" Width="20" Margin="10" Content="Kilépés bezárja az ablakot" HorizontalAlignment="Right" x:Name="bezarBTN" Click="bezarBTN_Click"/>
-                    <DockPanel Margin="20">
-                        <Label Content="Válasszon hónapot!"/>
-                        <ComboBox Width="300"/>
-                    </DockPanel>
-                    <DockPanel Margin="10">
-                        <Label Content="Rendezés szerint:"/>
-                        <ComboBox Width="200" x:Name="rendezesiszempontoCMBX"/>
-                        <Button Width="40" x:Name="felfeleLefeleBTN" Content="ˇ^"/>
-                    </DockPanel>
-                    <ListBox Height="300" Margin="20"></ListBox>
-                    <DockPanel>
-                        <Button Height="40" x:Name="kijeloltModositasaBTN" IsEnabled="False" Content="Tárgy módosítása" Width="250"/>
-                        <Button Height="40" x:Name="kijeloltTorleseBTN" IsEnabled="False" Content="Tárgy törlése" Width="250"/>
-                    </DockPanel>
-                </StackPanel>
-            </Grid>
+            <Grid x:Name="mainGrid" Grid.Column="1"></Grid>
         </Grid>
     </Border>
   

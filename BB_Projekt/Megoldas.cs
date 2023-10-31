@@ -11,11 +11,13 @@ namespace BB_Projekt
     public class Megoldas : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void OnPropertyChanged(string tulajdonsagNev)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(tulajdonsagNev));
         }
+        
+        public List<string> honapok = new List<string>() { "Január", "Február", "Március", "Április", "Május", "Június", "Július", "Augusztus", "Szeptember", "Október", "November", "December"};
+        public List<string> rendezes = new List<string>() { "Nap", "ABC", "Ár" };
         public Megoldas()
         {
             FajlOlvas();

@@ -19,3 +19,4 @@ C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\refint\BB_Proj
 C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.pdb
 C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.genruntimeconfig.cache
 C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\ref\BB_Projekt.dll
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\termekek.txt

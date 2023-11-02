@@ -27,7 +27,7 @@ namespace BB_Projekt
         {
             InitializeComponent();
             this.DataContext = megoldas;
-            alapOldalBuild();
+            //alapOldalBuild();
         }
 
         private void alapOldalBTN_Click(object sender, RoutedEventArgs e)
@@ -89,6 +89,12 @@ namespace BB_Projekt
         private void termekekLBX_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             torlesBTN.IsEnabled = modositBTN.IsEnabled = true;
+        }
+
+        private void ujTargyBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Ujablak uj = new Ujablak();
+            uj.ShowDialog();
         }
     }
 }

@@ -25,7 +25,7 @@
                 </Border>
                 <!--<Label Content="Költségvetési program" VerticalAlignment="Top" Margin="10"/>-->
                 <Button Height="40" x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
-                <Button Height="40" x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)"/>
+                <Button Height="40" x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
                 <Button Height="40" x:Name="keszitokBTN" Content="Készítők"/>
                 <Button Height="40" x:Name="statisztikaBTN" Content="Statisztika"/>
             </StackPanel>

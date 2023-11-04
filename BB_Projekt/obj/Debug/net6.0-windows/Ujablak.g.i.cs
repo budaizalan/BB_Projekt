@@ -101,7 +101,7 @@ namespace BB_Projekt {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BB_Projekt;component/ujablak.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BB_Projekt;V1.0.0.0;component/ujablak.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Ujablak.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

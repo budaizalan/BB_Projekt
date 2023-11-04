@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BB_Projekt"
         mc:Ignorable="d"
-        WindowStyle="None" Height="600" Background="Black" AllowsTransparency="True"
+        WindowStyle="None" Height="600" Background="Transparent" AllowsTransparency="True"
         Width="500" ResizeMode="NoResize" FontSize="20">
     <Window.Resources>
         <Style TargetType="Label">

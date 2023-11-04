@@ -9,27 +9,35 @@
         Width="800" ResizeMode="NoResize" FontSize="20">
 
     <Window.Resources>
-        <Style TargetType="Label">
-            <Setter Property="Foreground" Value="White"/>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="\BB_Projekt;component\css\MyStyle.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
-    <Border Background="#1f2041" CornerRadius="30">
+    <Border Background="#1f2041" CornerRadius="20">
         <Grid>
+            <Button Style="{DynamicResource CloseBtn}" Click="Button_Click" />
+            <Border Margin="0, 20, 0, 0" Width="620" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
+                <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
+            </Border>
+            <Grid x:Name="secondGrid" Grid.Column="0" Margin="0, 30, 0, 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition Width="550"/>
             </Grid.ColumnDefinitions>
+                
             <StackPanel Grid.Column="0">
-                <Border Margin="10" Width="220" Height="40" Background="#4b3f72" CornerRadius="20" VerticalAlignment="Top">
-                    <Label Content="Költségvetési program" Foreground="White" HorizontalAlignment="Center"/>
-                </Border>
+                <Border Margin="10" Height="40"></Border>
                 <!--<Label Content="Költségvetési program" VerticalAlignment="Top" Margin="10"/>-->
-                <Button Height="40" x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
-                <Button Height="40" x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
-                <Button Height="40" x:Name="keszitokBTN" Content="Készítők"/>
-                <Button Height="40" x:Name="statisztikaBTN" Content="Statisztika"/>
+                <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
+                <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
+                <Button x:Name="keszitokBTN" Content="Készítők"/>
+                <Button x:Name="statisztikaBTN" Content="Statisztika"/>
             </StackPanel>
             <Grid x:Name="mainGrid" Grid.Column="1"></Grid>
+            </Grid>
         </Grid>
     </Border>
   

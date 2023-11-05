@@ -11,6 +11,12 @@
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="White"/>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
     </Window.Resources>
     <Border Background="#1f2041" BorderThickness="5" CornerRadius="20">
         <Grid>
@@ -20,22 +26,22 @@
                 </Border>
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
                     <Label Content="Hónap :" Width="200" HorizontalContentAlignment="Right"/>
-                    <ComboBox x:Name="ujHonapCbbx" Width="150" Margin="50,0,0,0"/>
+                    <ComboBox x:Name="ujHonapCbbx" Width="150" Margin="50,0,0,0" ItemsSource="{Binding honapok}" SelectedIndex="{Binding ujtermekek[0], Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <Label Content="Nap :" Width="200" HorizontalContentAlignment="Right"/>
-                    <ComboBox x:Name="ujNapCbbx" Width="50" Margin="50,0,0,0"/>
+                    <ComboBox x:Name="ujNapCbbx" Width="50" Margin="50,0,0,0" SelectedItem="{Binding ujtermekek[1], Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <Label Content="Termék neve :" Width="200" HorizontalContentAlignment="Right"/>
-                    <TextBox x:Name="ujTermekTxtbx" Width="200" Margin="50,0,0,0"/>
+                    <TextBox x:Name="ujTermekTxtbx" Width="200" Margin="50,0,0,0" Text="{Binding ujtermekek[2], Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <Label Content="Termék ára (Ft) :" Width="200" HorizontalContentAlignment="Right"/>
-                    <TextBox x:Name="ujArTxtbx" Width="100" Margin="50,0,0,0"/>
+                    <TextBox x:Name="ujArTxtbx" Width="100" Margin="50,0,0,0" Text="{Binding ujtermekek[3], Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,200,0,0">
-                    <Button x:Name="ujFelvetelBtn" Content="Felvétel" Padding="5" Width="100" Margin="125,0,0,0"/>
+                    <Button x:Name="ujFelvetelBtn" Content="Felvétel" Padding="5" Width="100" Margin="125,0,0,0" Click="ujFelvetelBtn_Click"/>
                     <Button x:Name="ujMegseBtn" Content="Mégse" Padding="5" Width="100" Margin="50,0,0,0" Click="ujMegseBtn_Click"/>
                 </StackPanel>
             </StackPanel>

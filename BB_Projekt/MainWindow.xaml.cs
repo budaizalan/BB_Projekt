@@ -49,7 +49,7 @@ namespace BB_Projekt
                 sw.WriteLine("Datum;Termek;Ar(forintban)");
                 foreach (var termek in megoldas.termekek)
                 {
-                    sw.WriteLine($"{termek.Idopont};{termek.Nev};{termek.Ar}");
+                    sw.WriteLine($"{termek.Idopont:MM-dd};{termek.Nev};{termek.Ar}");
                 }
                 sw.Close();
             }
@@ -128,7 +128,12 @@ namespace BB_Projekt
         private void ujTargyBTN_Click(object sender, RoutedEventArgs e)
         {
             Ujablak uj = new Ujablak();
-            uj.ShowDialog();
+            if (uj.ShowDialog() == true)
+            {
+                megoldas.termekek.Add(uj.UjTermek());
+                termekekLBX.Items.Refresh();
+                FajlIras();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

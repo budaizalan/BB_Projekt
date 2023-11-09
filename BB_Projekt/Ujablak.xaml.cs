@@ -25,24 +25,10 @@ namespace BB_Projekt
         private List<int> napok;
 
         public ObservableCollection<string> ujtermekseged = new ObservableCollection<string>();
-
-        private Termek termek;
-        public Termek Termek
-        {
-            get
-            {
-                return termek;
-            }
-            set
-            {
-                termek = value;
-            }
-        }
         public Ujablak()
         {
             InitializeComponent();
             napok_Feltolt();
-            termek = new Termek();
             megoldas = new Megoldas();
             this.DataContext = megoldas;
         }
@@ -55,7 +41,7 @@ namespace BB_Projekt
 
         private void ujFelvetelBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(ujTermekTxtbx.Text) && int.TryParse(ujArTxtbx.Text, out int ar) && NapEllenorzo(ujHonapCbbx.SelectedItem.ToString(), int.Parse(ujNapCbbx.SelectedItem.ToString())))
+            if (!String.IsNullOrEmpty(ujTermekTxtbx.Text) && int.TryParse(ujArTxtbx.Text, out int ar) && int.TryParse(ujEvTxtbx.Text, out int ev) && NapEllenorzo(ujHonapCbbx.SelectedItem.ToString(), int.Parse(ujNapCbbx.SelectedItem.ToString())))
             {
                 MessageBoxResult result = MessageBox.Show("Biztos fel akarja venni a listába az új terméket?", "Mentés", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
@@ -111,8 +97,9 @@ namespace BB_Projekt
         public Termek UjTermek()
         {
             ujtermekseged = megoldas.ujtermekek;
-            ujtermekseged[0] = (int.Parse(ujtermekseged[0]) + 1).ToString();
-            string segedSor = $"{((int.Parse(ujtermekseged[0]) <= 9) ? "0" : "")}{ujtermekseged[0]}-{((int.Parse(ujtermekseged[1]) <= 9) ? "0" : "")}{ujtermekseged[1]};{ujtermekseged[2]};{ujtermekseged[3]}";
+            ujtermekseged[1] = (int.Parse(ujtermekseged[1]) + 1).ToString();
+            ujtermekseged[2] = (int.Parse(ujtermekseged[2]) + 1).ToString();
+            string segedSor = $"{ujtermekseged[0]};{((int.Parse(ujtermekseged[1]) <= 9) ? "0" : "")}{ujtermekseged[1]}-{((int.Parse(ujtermekseged[2]) <= 9) ? "0" : "")}{ujtermekseged[2]};{ujtermekseged[3]};{ujtermekseged[4]}";
             return new Termek(segedSor);
         }
     }

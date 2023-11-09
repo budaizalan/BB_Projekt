@@ -36,7 +36,7 @@
                 <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
                 <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
                 <Button x:Name="keszitokBTN" Content="Készítők" Click="keszitokBTN_Click"/>
-                <Button x:Name="statisztikaBTN" Content="Statisztika"/>
+                <Button x:Name="statisztikaBTN" Content="Statisztika" Click="statisztikaBTN_Click"/>
             </StackPanel>
             <Grid x:Name="mainGrid" Grid.Column="1"></Grid>
             </Grid>

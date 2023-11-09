@@ -17,12 +17,14 @@ namespace BB_Projekt
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(tulajdonsagNev));
         }
 
-        public List<string> rendezes = new List<string>() { "Nap", "ABC", "Ár" };
+        public List<string> rendezes = new List<string>() { "Hónap", "ABC", "Ár" };
         public Megoldas()
         {
             FajlOlvas();
             honapok = new ObservableCollection<string>() { "Január", "Február", "Március", "Április", "Május", "Június", "Július", "Augusztus", "Szeptember", "Október", "November", "December" };
-            ujtermekek = new ObservableCollection<string>() { "0", "1", "", ""};
+            ujtermekek = new ObservableCollection<string>() { "2023", "0", "0", "", ""};
+            evek = new List<string>();
+            evek = termekek.Select(x => x.Ev).Distinct().ToList();
         }
 
         private List<Termek> _termekek;
@@ -30,6 +32,13 @@ namespace BB_Projekt
         {
             get { return _termekek; }
             set { _termekek = value; OnPropertyChanged("termekek"); }
+        }
+
+        private List<string> _evek;
+        public List<string> evek
+        {
+            get { return _evek; }
+            set { _evek = value; OnPropertyChanged("evek"); }
         }
 
         private ObservableCollection<string> _honapok;

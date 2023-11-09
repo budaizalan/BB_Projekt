@@ -1,0 +1,13 @@
+Datum;Termek;Ar(forintban)
+01-24;Laptop;400000
+02-03;Döner;3000
+03-02;BigMac;1500
+04-12;Tej;300
+05-26;Kutyatáp;4320
+06-15;Egér;20000
+07-23;Lángos;1500
+08-31;Füzet;300
+09-21;Telefon;200000
+10-22;Kenyér;500
+11-17;Nyaklánc;120000
+12-22;Ajándék;20000

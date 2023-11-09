@@ -18,8 +18,10 @@
     </Window.Resources>
     <Border Background="#1f2041" CornerRadius="20">
         <Grid>
-            <Button Style="{DynamicResource CloseBtn}" Click="Button_Click" />
-            <Border Margin="0, 20, 0, 0" Width="620" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
+            <Button  Style="{DynamicResource CloseBtn}" Click="Button_Click">
+                <Image Source="Images/close.png"></Image>
+            </Button>
+                <Border Margin="0, 20, 0, 0" Width="620" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
                 <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
             </Border>
             <Grid x:Name="secondGrid" Grid.Column="0" Margin="0, 30, 0, 0">
@@ -33,7 +35,7 @@
                 <!--<Label Content="Költségvetési program" VerticalAlignment="Top" Margin="10"/>-->
                 <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
                 <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
-                <Button x:Name="keszitokBTN" Content="Készítők"/>
+                <Button x:Name="keszitokBTN" Content="Készítők" Click="keszitokBTN_Click"/>
                 <Button x:Name="statisztikaBTN" Content="Statisztika"/>
             </StackPanel>
             <Grid x:Name="mainGrid" Grid.Column="1"></Grid>

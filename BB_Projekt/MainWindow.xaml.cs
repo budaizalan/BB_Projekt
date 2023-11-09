@@ -38,7 +38,8 @@ namespace BB_Projekt
         private void bezarBTN_Click(object sender, RoutedEventArgs e)
         {
             FajlIras();
-            mainGrid.Children.Clear();
+            stackPanel.Children.Clear();
+            listaOldalBTN.IsEnabled = true;
         }
 
         private void FajlIras()
@@ -62,20 +63,25 @@ namespace BB_Projekt
         StackPanel stackPanel = new StackPanel();
             Button bezarBtn = new Button();
             DockPanel dp1 = new DockPanel(); Label lb1 = new Label(); ComboBox cmbbx1 = new ComboBox();
-            DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox(); Button felLeBTN = new Button();
+            DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox();
             ListBox termekekLBX = new ListBox();
-            DockPanel dp3 = new DockPanel(); Button modositBTN = new Button(); Button torlesBTN = new Button();
+            DockPanel dp3 = new DockPanel(); 
+            Button torlesBTN = new Button();
 
         private void alapOldalBuild()
         {
             mainGrid.Children.Clear();
+            stackPanel.Children.Clear();
+            dp1.Children.Clear();
+            dp2.Children.Clear();
+            dp3.Children.Clear();
             listaOldalBTN.IsEnabled = false;
             bezarBtn.Margin = new Thickness(20);
             bezarBtn.Height = 20;
             bezarBtn.Width = 20;
             bezarBtn.Content = "x";
             bezarBtn.HorizontalAlignment = HorizontalAlignment.Right;
-            bezarBtn.Click += bezarBTN_Click;
+            bezarBtn.Click += bezarBTN_Click;            
 
             stackPanel.Children.Add(bezarBtn);
 
@@ -90,29 +96,25 @@ namespace BB_Projekt
 
             lbl2.Content = "Rendezés szerint:";
             cmbbx2.ItemsSource = megoldas.rendezes;
-            cmbbx2.Width = 200; 
+            cmbbx2.Width = 200;
             cmbbx2.SelectedIndex = 0;
-            felLeBTN.Width = 20; 
-            felLeBTN.Content = "ˇ";
-            dp2.Children.Add(lbl2); 
+            dp2.Children.Add(lbl2);
             dp2.Children.Add(cmbbx2);
-            dp2.Children.Add(felLeBTN);
 
             stackPanel.Children.Add(dp2);
 
 
-            termekekLBX.ItemsSource = megoldas.termekek; 
-            termekekLBX.Height = 300; 
-            termekekLBX.Margin = new Thickness(20); 
+            termekekLBX.ItemsSource = megoldas.termekek;
+            termekekLBX.Height = 300;
+            termekekLBX.Margin = new Thickness(20);
             termekekLBX.SelectionChanged += termekekLBX_SelectionChanged;
 
             stackPanel.Children.Add(termekekLBX);
 
-            torlesBTN.Height = modositBTN.Height = 40; 
-            modositBTN.IsEnabled = torlesBTN.IsEnabled = false; 
-            modositBTN.Content = "Tárgy módosítása"; 
-            torlesBTN.Content = "Tárgy törlése";
-            dp3.Children.Add(modositBTN); 
+            torlesBTN.Height = 40;
+            torlesBTN.Width = 380;
+            torlesBTN.IsEnabled = false;
+            torlesBTN.Content = "Tárgy törlése"; 
             dp3.Children.Add(torlesBTN); 
 
 
@@ -120,9 +122,14 @@ namespace BB_Projekt
             mainGrid.Children.Add(stackPanel);
         }
 
+        private void keszitokOldal_Build()
+        {
+            mainGrid.Children.Clear();
+        }
+
         private void termekekLBX_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            torlesBTN.IsEnabled = modositBTN.IsEnabled = true;
+            torlesBTN.IsEnabled = true;
         }
 
         private void ujTargyBTN_Click(object sender, RoutedEventArgs e)
@@ -134,12 +141,21 @@ namespace BB_Projekt
                 termekekLBX.Items.Refresh();
                 FajlIras();
             }
+            listaOldalBTN.IsEnabled = true;
+            stackPanel.Children.Clear();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FajlIras();
             this.Close();
+        }
+
+        private void keszitokBTN_Click(object sender, RoutedEventArgs e)
+        {
+            keszitokOldal_Build();
+            listaOldalBTN.IsEnabled = true;
+            stackPanel.Children.Clear();
         }
     }
 }

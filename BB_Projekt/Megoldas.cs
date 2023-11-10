@@ -17,7 +17,7 @@ namespace BB_Projekt
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(tulajdonsagNev));
         }
 
-        public List<string> rendezes = new List<string>() { "Hónap", "ABC", "Ár" };
+        public List<string> rendezes = new List<string>() { "ABC", "Hónap", "Ár" };
         public Megoldas()
         {
             FajlOlvas();

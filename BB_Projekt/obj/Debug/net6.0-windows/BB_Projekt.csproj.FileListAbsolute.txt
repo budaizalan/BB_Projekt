@@ -101,3 +101,9 @@ C:\Users\budai.zalan\Source\Repos\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows
 D:\12.A\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\close.png
 D:\12.A\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\KissMarcell.jpg
 D:\12.A\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\teve.jpg
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\close.png
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\KissMarcell.jpg
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\bin\Debug\net6.0-windows\Images\teve.jpg
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\css\MyStyle.baml
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Ujablak.g.cs
+C:\Develop\C#_Suli\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Ujablak.baml

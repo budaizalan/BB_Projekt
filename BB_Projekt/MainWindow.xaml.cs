@@ -32,6 +32,7 @@ namespace BB_Projekt
             this.DataContext = megoldas;
             bezarBtn.Click += bezarBTN_Click;
             torlesBTN.Click += torlesBTN_Click;
+            btn2.Click += felLe_Click;
             //alapOldalBuild();
         }
 
@@ -114,7 +115,7 @@ namespace BB_Projekt
         StackPanel stackPanel = new StackPanel();
             Button bezarBtn = new Button();
             DockPanel dp1 = new DockPanel(); Label lb1 = new Label(); ComboBox cmbbx1 = new ComboBox();
-            DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox();
+            DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox(); Button btn2 = new Button();
             ListBox termekekLBX = new ListBox();
             DockPanel dp3 = new DockPanel(); 
             Button torlesBTN = new Button();
@@ -144,6 +145,7 @@ namespace BB_Projekt
             cmbbx1.ItemsSource = megoldas.evek;
             cmbbx1.Width = 300;
             cmbbx1.SelectedIndex = 0;
+            cmbbx1.SelectionChanged += evekCmbx_SelectionChanged;
             dp1.Children.Add(lb1);
             dp1.Children.Add(cmbbx1);
 
@@ -152,9 +154,15 @@ namespace BB_Projekt
             lbl2.Content = "Rendezés szerint:";
             cmbbx2.ItemsSource = megoldas.rendezes;
             cmbbx2.Width = 200;
+            cmbbx2.SelectionChanged += sortByCMBX_SelectionChanged;
             cmbbx2.SelectedIndex = 0;
+            btn2.Content = "ˇ";
+            btn2.Width = 20;
+            btn2.Height = 20;
+
             dp2.Children.Add(lbl2);
             dp2.Children.Add(cmbbx2);
+            dp2.Children.Add(btn2);
             dp2.Margin = new Thickness(0, 10, 0, 0);
 
             stackPanel.Children.Add(dp2);
@@ -251,6 +259,59 @@ namespace BB_Projekt
             stackPanel.Children.Add(lbl5);
 
             mainGrid.Children.Add(stackPanel);
+        }
+
+
+        private void evekCmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            alapOldalSort();
+        }
+
+        private void sortByCMBX_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            alapOldalSort();
+        }
+
+
+        private void felLe_Click(object sender, EventArgs e) 
+        {
+            if (btn2.Content.ToString() == "ˇ")
+                btn2.Content = "^";
+            else
+                btn2.Content = "ˇ";
+            alapOldalSort();
+        }
+        private void alapOldalSort()
+        {
+            kivalasztottTermek.Clear();
+            string selectedEv = cmbbx1.SelectedItem.ToString();
+            string sortBy = cmbbx2.SelectedItem.ToString();
+            string felLe = btn2.Content as string;
+
+            foreach (var termek in megoldas.termekek)
+            {
+                if (termek.Ev == selectedEv)
+                {
+                    kivalasztottTermek.Add(termek);
+                }
+            }
+
+            var newList = new List<Termek>();
+            if (sortBy == "ABC" && felLe == "^")
+                newList = kivalasztottTermek.OrderByDescending(x => x.Nev).ToList();
+            else if(sortBy == "Hónap" && felLe == "^")
+                newList = kivalasztottTermek.OrderByDescending(x => x.Idopont).ToList();
+            else if(sortBy == "Ár" && felLe == "^")
+                newList = kivalasztottTermek.OrderBy(x => x.Ar).ToList();
+            else if(sortBy == "ABC" && felLe == "ˇ")
+                newList = kivalasztottTermek.OrderBy(x => x.Nev).ToList();
+            else if(sortBy == "Hónap" && felLe == "ˇ")
+                newList = kivalasztottTermek.OrderBy(x => x.Idopont).ToList();
+            else if (sortBy == "Ár" && felLe == "ˇ")
+                newList = kivalasztottTermek.OrderByDescending(x => x.Ar).ToList();
+
+            termekekLBX.ItemsSource = newList;
+            termekekLBX.Items.Refresh();
         }
 
         private void keszitokOldal_Build()

@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Benjamin\\.nuget\\packages\\": {}
+    "C:\\Users\\kissm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\12.A\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "projectUniqueName": "C:\\Develop\\C#_Suli\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
       "projectName": "BB_Projekt",
-      "projectPath": "D:\\12.A\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
-      "packagesPath": "C:\\Users\\Benjamin\\.nuget\\packages\\",
-      "outputPath": "D:\\12.A\\BB_Projekt\\BB_Projekt\\obj\\",
+      "projectPath": "C:\\Develop\\C#_Suli\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "packagesPath": "C:\\Users\\kissm\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\C#_Suli\\BB_Projekt\\BB_Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Benjamin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kissm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

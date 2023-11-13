@@ -22,8 +22,8 @@
                 <Image Source="Images/close.png"></Image>
             </Button>
                 <Border Margin="0, 20, 0, 0" Width="620" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
-                <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
-            </Border>
+                    <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
+                </Border>
             <Grid x:Name="secondGrid" Grid.Column="0" Margin="0, 30, 0, 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
@@ -36,8 +36,8 @@
                 <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
                 <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
                 <Button x:Name="keszitokBTN" Content="Készítők" Click="keszitokBTN_Click"/>
-                <Button x:Name="statisztikaBTN" Content="Statisztika" Click="statisztikaBTN_Click"/>
-            </StackPanel>
+                    <Button x:Name="statisztikaBTN" Content="Statisztika" Click="statisztikaBTN_Click"/>
+                </StackPanel>
             <Grid x:Name="mainGrid" Grid.Column="1"></Grid>
             </Grid>
         </Grid>

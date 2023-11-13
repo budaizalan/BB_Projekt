@@ -46,7 +46,7 @@ namespace BB_Projekt
         {
             FajlIras();
             stackPanel.Children.Clear();
-            listaOldalBTN.IsEnabled = statisztikaBTN.IsEnabled = true;
+            listaOldalBTN.IsEnabled = statisztikaBTN.IsEnabled = keszitokBTN.IsEnabled = true;
         }
 
         private void ujTargyBTN_Click(object sender, RoutedEventArgs e)
@@ -83,8 +83,7 @@ namespace BB_Projekt
 
         private void keszitokBTN_Click(object sender, RoutedEventArgs e)
         {
-            keszitokOldal_Build();
-            stackPanel.Children.Clear();
+            KeszitokOldalBuild();
             statisztikaBTN.IsEnabled = listaOldalBTN.IsEnabled = true;
         }
 
@@ -112,34 +111,43 @@ namespace BB_Projekt
             }
         }
 
-        StackPanel stackPanel = new StackPanel();
+            StackPanel stackPanel = new StackPanel();
+            DockPanel dp3 = new DockPanel(); 
             Button bezarBtn = new Button();
             DockPanel dp1 = new DockPanel(); Label lb1 = new Label(); ComboBox cmbbx1 = new ComboBox();
             DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox(); Button btn2 = new Button();
             ListBox termekekLBX = new ListBox();
-            DockPanel dp3 = new DockPanel(); 
             Button torlesBTN = new Button();
-
             ComboBox cmbbxStat1 = new ComboBox(); ComboBox cmbbxStat2 = new ComboBox();
             Label lbl3 = new Label(); Label lbl4 = new Label(); Label lbl5 = new Label();
             CheckBox ckbx1 = new CheckBox(); CheckBox ckbx2 = new CheckBox();
+            ColumnDefinition cdef = new ColumnDefinition();
+            
 
-
-        private void alapOldalBuild()
+        public void AllClear()
         {
             mainGrid.Children.Clear();
             stackPanel.Children.Clear();
             dp1.Children.Clear();
             dp2.Children.Clear();
             dp3.Children.Clear();
-            listaOldalBTN.IsEnabled = false;
+        }
+
+        public void BezarBTNBuild()
+        {
             bezarBtn.Margin = new Thickness(20);
             bezarBtn.Height = 20;
             bezarBtn.Width = 20;
             bezarBtn.Content = "x";
-            bezarBtn.HorizontalAlignment = HorizontalAlignment.Right;           
-
+            bezarBtn.HorizontalAlignment = HorizontalAlignment.Right;
             stackPanel.Children.Add(bezarBtn);
+        }
+
+        private void alapOldalBuild()
+        {
+            AllClear();
+            listaOldalBTN.IsEnabled = false;
+            BezarBTNBuild();
 
             lb1.Content = "Válasszon évet:";
             cmbbx1.ItemsSource = megoldas.evek;
@@ -188,19 +196,9 @@ namespace BB_Projekt
 
         private void statisztikaOldalBuild()
         {
-            mainGrid.Children.Clear();
-            stackPanel.Children.Clear();
-            dp1.Children.Clear();
-            dp2.Children.Clear();
-            dp3.Children.Clear();
+            AllClear();
             statisztikaBTN.IsEnabled = false;
-            bezarBtn.Margin = new Thickness(20);
-            bezarBtn.Height = 20;
-            bezarBtn.Width = 20;
-            bezarBtn.Content = "x";
-            bezarBtn.HorizontalAlignment = HorizontalAlignment.Right;
-
-            stackPanel.Children.Add(bezarBtn);
+            BezarBTNBuild();
 
             lb1.Content = "Válasszon évet:";
             lb1.Width = 200;
@@ -261,6 +259,34 @@ namespace BB_Projekt
             mainGrid.Children.Add(stackPanel);
         }
 
+        public void KeszitokOldalBuild()
+        {
+            AllClear();
+            keszitokBTN.IsEnabled = false;
+            BezarBTNBuild();
+
+            lb1.Content = "Készítők";
+            lb1.Width = 500;
+            dp1.Children.Add(lb1);
+            lbl2.Content = "Fekete Miklós";
+            lbl2.Width = 150;
+            lbl2.Margin = new Thickness(10);
+            dp2.Children.Add(lbl2);
+            lbl3.Content = "Kiss Marcell";
+            lbl3.Width = 150;
+            lbl3.Margin = new Thickness(10);
+            dp2.Children.Add(lbl3);
+            lbl4.Content = "Budai Zalán";
+            lbl4.Width = 150;
+            lbl4.Margin = new Thickness(10);
+            dp2.Children.Add(lbl4);
+            dp2.Margin = new Thickness(10);
+
+            stackPanel.Children.Add(dp1);
+            stackPanel.Children.Add(dp2);
+            mainGrid.Children.Add(stackPanel);
+        }
+
 
         private void evekCmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -312,11 +338,6 @@ namespace BB_Projekt
 
             termekekLBX.ItemsSource = newList;
             termekekLBX.Items.Refresh();
-        }
-
-        private void keszitokOldal_Build()
-        {
-            mainGrid.Children.Clear();
         }
 
         private void termekekLBX_SelectionChanged(object sender, SelectionChangedEventArgs e)

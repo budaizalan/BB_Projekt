@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Jedlik\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\ytpen\\Desktop\\bb\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
       "projectName": "BB_Projekt",
-      "projectPath": "D:\\_Jedlik\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "projectPath": "C:\\Users\\ytpen\\Desktop\\bb\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
       "packagesPath": "C:\\Users\\ytpen\\.nuget\\packages\\",
-      "outputPath": "D:\\_Jedlik\\BB_Projekt\\BB_Projekt\\obj\\",
+      "outputPath": "C:\\Users\\ytpen\\Desktop\\bb\\BB_Projekt\\BB_Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

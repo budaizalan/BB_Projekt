@@ -27,9 +27,12 @@
         <Setter Property="Width" Value="25"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Content" Value="x"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="#1f2041"/>
+        <Setter Property="Background" Value="#4b3f72"/>
         <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Margin" Value="0, 5, 5, 0"/>
         <Style.Resources>
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="30"/>

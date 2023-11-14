@@ -16,13 +16,25 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Border Background="#1f2041" CornerRadius="20">
+    <Border BorderThickness="2" BorderBrush="#4b3f72" CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF1F2041" Offset="1"/>
+                <GradientStop Color="#FF0C0D1A" Offset="0.188"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid>
-            <Button  Style="{DynamicResource CloseBtn}" Click="Button_Click">
-                <Image Source="Images/close.png"></Image>
-            </Button>
-                <Border Margin="0, 20, 0, 0" Width="620" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
-                    <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
+            <Button  Style="{DynamicResource CloseBtn}" Click="Button_Click"></Button>
+                <Border Margin="0, 20, 0, 0" Width="620" Height="40" CornerRadius="15" VerticalAlignment="Top">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF4B3F72" Offset="1"/>
+                        <GradientStop Color="#FF26203A" Offset="0.054"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
                 </Border>
             <Grid x:Name="secondGrid" Grid.Column="0" Margin="0, 30, 0, 0">
             <Grid.ColumnDefinitions>
@@ -33,10 +45,42 @@
             <StackPanel Grid.Column="0">
                 <Border Margin="10" Height="40"></Border>
                 <!--<Label Content="Költségvetési program" VerticalAlignment="Top" Margin="10"/>-->
-                <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click"/>
-                <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click"/>
-                <Button x:Name="keszitokBTN" Content="Készítők" Click="keszitokBTN_Click"/>
-                <Button x:Name="statisztikaBTN" Content="Statisztika" Click="statisztikaBTN_Click"/>
+                    <Button x:Name="listaOldalBTN" Content="Költségvetés számláló" VerticalAlignment="Top" Click="alapOldalBTN_Click">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF4B3F72" Offset="1"/>
+                                <GradientStop Color="#FF26203A" Offset="0.054"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                <Button x:Name="ujTargyBTN" Content="Új tárgy felvétele (új ablak)" Click="ujTargyBTN_Click">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF4B3F72" Offset="1"/>
+                                <GradientStop Color="#FF26203A" Offset="0.054"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="keszitokBTN" Content="Készítők" Click="keszitokBTN_Click">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF4B3F72" Offset="1"/>
+                                <GradientStop Color="#FF26203A" Offset="0.054"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="statisztikaBTN" Content="Statisztika" Click="statisztikaBTN_Click">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF4B3F72" Offset="1"/>
+                                <GradientStop Color="#FF26203A" Offset="0.054"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
                 </StackPanel>
             <Grid x:Name="mainGrid" Grid.Column="1"></Grid>
             </Grid>

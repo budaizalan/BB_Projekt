@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\BB_Projekt-main\\FATAL\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "projectUniqueName": "Z:\\BB_Projekt-main\\f\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
       "projectName": "BB_Projekt",
-      "projectPath": "Z:\\BB_Projekt-main\\FATAL\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
+      "projectPath": "Z:\\BB_Projekt-main\\f\\BB_Projekt\\BB_Projekt\\BB_Projekt.csproj",
       "packagesPath": "C:\\Users\\budai.zalan\\.nuget\\packages\\",
-      "outputPath": "Z:\\BB_Projekt-main\\FATAL\\BB_Projekt\\BB_Projekt\\obj\\",
+      "outputPath": "Z:\\BB_Projekt-main\\f\\BB_Projekt\\BB_Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

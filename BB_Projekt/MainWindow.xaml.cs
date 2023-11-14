@@ -263,28 +263,8 @@ namespace BB_Projekt
         {
             AllClear();
             keszitokBTN.IsEnabled = false;
-            BezarBTNBuild();
 
-            lb1.Content = "Készítők";
-            lb1.Width = 500;
-            dp1.Children.Add(lb1);
-            lbl2.Content = "Fekete Miklós";
-            lbl2.Width = 150;
-            lbl2.Margin = new Thickness(10);
-            dp2.Children.Add(lbl2);
-            lbl3.Content = "Kiss Marcell";
-            lbl3.Width = 150;
-            lbl3.Margin = new Thickness(10);
-            dp2.Children.Add(lbl3);
-            lbl4.Content = "Budai Zalán";
-            lbl4.Width = 150;
-            lbl4.Margin = new Thickness(10);
-            dp2.Children.Add(lbl4);
-            dp2.Margin = new Thickness(10);
 
-            stackPanel.Children.Add(dp1);
-            stackPanel.Children.Add(dp2);
-            mainGrid.Children.Add(stackPanel);
         }
 
 

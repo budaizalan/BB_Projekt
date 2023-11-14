@@ -18,7 +18,7 @@
     <Grid>
         <Border Background="#1f2041" CornerRadius="20">
             <Grid>
-                <Button  Style="{DynamicResource CloseBtn}"></Button>
+                <Button  Style="{DynamicResource CloseBtn}" Click="Button_Click"></Button>
                 <Border Margin="0, 10, 0, 0" Width="420" Height="40" Background="#4b3f72" CornerRadius="15" VerticalAlignment="Top">
                     <Label Content="Költségvetési program" HorizontalAlignment="Center"/>
                 </Border>
@@ -43,7 +43,7 @@
                                 <TranslateTransform Y="-6.661"/>
                             </TransformGroup>
                         </GroupBox.RenderTransform>
-                        <Hyperlink NavigateUri="https://github.com/FeketeMiklosBenjamin" >
+                        <Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate">
                             <Run Text="asd"/>
                         </Hyperlink>
                     </GroupBox>

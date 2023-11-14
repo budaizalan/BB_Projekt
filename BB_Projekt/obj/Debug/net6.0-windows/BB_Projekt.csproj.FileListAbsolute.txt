@@ -163,3 +163,14 @@ Z:\BB_Projekt-main\f\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.g
 Z:\BB_Projekt-main\f\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\ref\BB_Projekt.dll
 Z:\BB_Projekt-main\f\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Keszitok.g.cs
 Z:\BB_Projekt-main\f\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Keszitok.baml
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.csproj.AssemblyReference.cache
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\css\MyStyle.baml
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Keszitok.g.cs
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\Ujablak.g.cs
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\App.g.cs
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt_MarkupCompile.cache
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt_MarkupCompile.lref
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.dll
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\refint\BB_Projekt.dll
+D:\_Jedlik\BB_Projekt\BB_Projekt\obj\Debug\net6.0-windows\BB_Projekt.pdb

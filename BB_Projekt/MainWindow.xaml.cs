@@ -26,6 +26,33 @@ namespace BB_Projekt
         Megoldas megoldas = new Megoldas();
 
         List<Termek> kivalasztottTermek = new List<Termek>();
+
+        StackPanel stackPanel = new StackPanel();
+
+        DockPanel dp3 = new DockPanel();
+        DockPanel dp1 = new DockPanel(); 
+        DockPanel dp2 = new DockPanel();
+
+        Label lb1 = new Label();
+        Label lbl2 = new Label();
+        Label lbl3 = new Label();
+        Label lbl4 = new Label(); 
+        Label lbl5 = new Label();
+
+        Button bezarBtn = new Button();
+        Button btn2 = new Button();
+        Button torlesBTN = new Button();
+
+        ComboBox cmbbx1 = new ComboBox();
+        ComboBox cmbbx2 = new ComboBox();
+        ComboBox cmbbxStat1 = new ComboBox();
+        ComboBox cmbbxStat2 = new ComboBox();
+
+        CheckBox ckbx1 = new CheckBox(); 
+        CheckBox ckbx2 = new CheckBox();
+
+        ListBox termekekLBX = new ListBox();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -81,12 +108,6 @@ namespace BB_Projekt
             }
         }
 
-        private void keszitokBTN_Click(object sender, RoutedEventArgs e)
-        {
-            KeszitokOldalBuild();
-            statisztikaBTN.IsEnabled = listaOldalBTN.IsEnabled = true;
-        }
-
         private void statisztikaBTN_Click(object sender, RoutedEventArgs e)
         {
             statisztikaOldalBuild();
@@ -110,19 +131,6 @@ namespace BB_Projekt
                 MessageBox.Show($"Fájl írás sikertelen! {ex}", "Hiba!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-            StackPanel stackPanel = new StackPanel();
-            DockPanel dp3 = new DockPanel(); 
-            Button bezarBtn = new Button();
-            DockPanel dp1 = new DockPanel(); Label lb1 = new Label(); ComboBox cmbbx1 = new ComboBox();
-            DockPanel dp2 = new DockPanel(); Label lbl2 = new Label(); ComboBox cmbbx2 = new ComboBox(); Button btn2 = new Button();
-            ListBox termekekLBX = new ListBox();
-            Button torlesBTN = new Button();
-            ComboBox cmbbxStat1 = new ComboBox(); ComboBox cmbbxStat2 = new ComboBox();
-            Label lbl3 = new Label(); Label lbl4 = new Label(); Label lbl5 = new Label();
-            CheckBox ckbx1 = new CheckBox(); CheckBox ckbx2 = new CheckBox();
-            ColumnDefinition cdef = new ColumnDefinition();
-            
 
         public void AllClear()
         {
@@ -259,15 +267,6 @@ namespace BB_Projekt
             mainGrid.Children.Add(stackPanel);
         }
 
-        public void KeszitokOldalBuild()
-        {
-            AllClear();
-            keszitokBTN.IsEnabled = false;
-
-
-        }
-
-
         private void evekCmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             alapOldalSort();
@@ -278,7 +277,6 @@ namespace BB_Projekt
             alapOldalSort();
         }
 
-
         private void felLe_Click(object sender, EventArgs e) 
         {
             if (btn2.Content.ToString() == "ˇ")
@@ -287,6 +285,7 @@ namespace BB_Projekt
                 btn2.Content = "ˇ";
             alapOldalSort();
         }
+
         private void alapOldalSort()
         {
             kivalasztottTermek.Clear();
@@ -455,6 +454,13 @@ namespace BB_Projekt
             lbl4.Content = $"Vásárolt termékek mennyisége: {kivalasztottTermek.Count()}";
             lbl5.Content = $"Átlag költekezés(Ft): {((kivalasztottTermek.Count() == 0) ? "NaN" : koltekezes / kivalasztottTermek.Count())}";
             termekekLBX.Items.Refresh();
+        }
+
+        private void keszitokBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Keszitok KeszitokOldal = new Keszitok();
+            KeszitokOldal.Show();
+            statisztikaBTN.IsEnabled = listaOldalBTN.IsEnabled = true;
         }
     }
 }
